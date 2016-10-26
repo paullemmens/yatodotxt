@@ -60,5 +60,9 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+;; (defun yatodotxt/init-todotxt ()
+;;   (use-package todotxt))
+;; (defun yatodotxt/init-yatodotxt ()
+;;   (use-package todotxt))
 
 ;;; packages.el ends here
