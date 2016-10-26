@@ -30,7 +30,9 @@
 ;;; Code:
 
 (defconst yatodotxt-packages
-  '(todotxt)
+  '(
+    (todotxt :location local)
+    )
   "The list of Lisp packages required by the yatodotxt layer.
 
 Each entry is either:
