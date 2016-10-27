@@ -60,9 +60,21 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-;; (defun yatodotxt/init-todotxt ()
-;;   (use-package todotxt))
-;; (defun yatodotxt/init-yatodotxt ()
-;;   (use-package todotxt))
+(defun yatodotxt/init-todotxt ()
+  "Initialize todotxt.el via yatodotxt."
+  (use-package todotxt
+    ;; :commands (todotxt-open-file
+    ;;            todotxt-add-item-any-buffer
+    ;;            todotxt-unhide-all
+    ;;            todotxt-filter-for
+    ;;            todotxt-filter-out)
+    ;; ;; :mode (("todo\\.txt" . todotxt-mode))
+    :init
+    (spacemacs/declare-prefix "ot" "todotxt")
+    ))
+
+;; (defun yatodotxt/init-todotxt-mode ()
+;;   (use-package todotxt-mode)
+;;   )
 
 ;;; packages.el ends here
