@@ -1,0 +1,3 @@
+[submodule "local/todotxt"]
+	path = local/todotxt
+	url = https://github.com/paullemmens/todotxt.el.git
