@@ -537,8 +537,10 @@ removed."
 
 (defun todotxt-bury ()
   (interactive)
-  (bury-buffer)
-  (delete-window))
+  ;; (bury-buffer)
+  ;; (delete-window))
+  (if todotxt-save-after-change (save-buffer))
+  (kill-buffer-and-window))
 
 (defun todotxt-unhide-all ()
   (interactive)
