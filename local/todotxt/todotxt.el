@@ -428,7 +428,10 @@ the file, saving afterwards."
                (concat (todotxt-get-formatted-date) " "))
            item "\n"))
   (todotxt-prioritize 'todotxt-get-due-priority-sort-key)
-  (if todotxt-save-after-change (save-buffer))
+  (if todotxt-save-after-change
+      (progn
+        (save-buffer)
+        (todotxt-unhide-all)))
   (todotxt-jump-to-item item))
 
 (defun todotxt-add-item-any-buffer (item)
@@ -448,6 +451,7 @@ list and append it to the file, saving afterwards."
                  (concat
                   (todotxt-get-formatted-date) " "))
              item "\n"))
+    (todotxt-unhide-all)
     (save-buffer)
     (message (concat "Todo inserted at the end of " todotxt-file))))
 
