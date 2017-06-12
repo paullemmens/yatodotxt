@@ -453,6 +453,7 @@ list and append it to the file, saving afterwards."
              item "\n"))
     (todotxt-unhide-all)
     (save-buffer)
+    (kill-buffer (current-buffer))
     (message (concat "Todo inserted at the end of " todotxt-file))))
 
 (defun todotxt-add-priority ()
